@@ -5,8 +5,10 @@ package com.multi.enterprise.types.poll;
 
 import java.io.Serializable;
 
-import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
 import com.multi.enterprise.types.AbstractEntity;
 
@@ -14,7 +16,9 @@ import com.multi.enterprise.types.AbstractEntity;
  * @author Robot
  *
  */
+@XmlType
 @XmlRootElement(name = "option")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Options extends AbstractEntity implements Serializable {
 
 	/**
@@ -31,7 +35,6 @@ public class Options extends AbstractEntity implements Serializable {
 	/**
 	 * @return the id
 	 */
-	@XmlElement(name = "uniqueId")
 	public int getUniqueId() {
 		return id;
 	}
@@ -39,7 +42,6 @@ public class Options extends AbstractEntity implements Serializable {
 	/**
 	 * @return the optionId
 	 */
-	@XmlElement(name = "optionId")
 	public String getOptionId() {
 		return optionId;
 	}
@@ -54,7 +56,6 @@ public class Options extends AbstractEntity implements Serializable {
 	/**
 	 * @return the questionId
 	 */
-	@XmlElement(name = "questionId")
 	public String getQuestionId() {
 		return questionId;
 	}
@@ -69,7 +70,6 @@ public class Options extends AbstractEntity implements Serializable {
 	/**
 	 * @return the optionValue
 	 */
-	@XmlElement(name = "optionValue")
 	public String getOptionValue() {
 		return optionValue;
 	}
@@ -84,7 +84,6 @@ public class Options extends AbstractEntity implements Serializable {
 	/**
 	 * @return the optionType
 	 */
-	@XmlElement(name = "optionType")
 	public String getOptionType() {
 		return optionType;
 	}
@@ -99,7 +98,6 @@ public class Options extends AbstractEntity implements Serializable {
 	/**
 	 * @return the optionCount
 	 */
-	@XmlElement(name = "optionCount")
 	public int getOptionCount() {
 		return optionCount;
 	}
