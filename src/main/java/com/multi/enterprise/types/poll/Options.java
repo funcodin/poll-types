@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-import com.multi.enterprise.types.AbstractEntity;
+import com.multi.enterprise.types.AbstractPersistable;
 
 /**
  * @author Robot
@@ -19,25 +19,14 @@ import com.multi.enterprise.types.AbstractEntity;
 @XmlType
 @XmlRootElement(name = "option")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Options extends AbstractEntity implements Serializable {
+public class Options extends AbstractPersistable implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
-	private int id;
 	private String optionId;
 	private String questionId;
 	private String optionValue;
 	private String optionType;
 	private int optionCount;
-
-	/**
-	 * @return the id
-	 */
-	public int getUniqueId() {
-		return id;
-	}
 
 	/**
 	 * @return the optionId

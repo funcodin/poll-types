@@ -11,7 +11,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-import com.multi.enterprise.types.AbstractEntity;
+import com.multi.enterprise.types.AbstractPersistable;
 
 /**
  * @author Robot
@@ -21,26 +21,15 @@ import com.multi.enterprise.types.AbstractEntity;
 @XmlType
 @XmlRootElement(name = "quesiton")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Question extends AbstractEntity implements Serializable {
-
-	/**
-	 * 
-	 */
+public class Question extends AbstractPersistable implements Serializable {
 	private static final long serialVersionUID = 1L;
-	private int id;
 	private String questionId;
 	private String question;
+	private String optionType;
 	private String qrCodeUrl;
 	private String mediaUrl;
 	private String userId;
 	private List<Options> opitons;
-
-	/**
-	 * @return the id
-	 */
-	public int getUniqueId() {
-		return id;
-	}
 
 	/**
 	 * @return the questionId
@@ -68,6 +57,20 @@ public class Question extends AbstractEntity implements Serializable {
 	 */
 	public void setQuestion(String question) {
 		this.question = question;
+	}
+
+	/**
+	 * @return the optionType
+	 */
+	public String getOptionType() {
+		return optionType;
+	}
+
+	/**
+	 * @param optionType the optionType to set
+	 */
+	public void setOptionType(String optionType) {
+		this.optionType = optionType;
 	}
 
 	/**
