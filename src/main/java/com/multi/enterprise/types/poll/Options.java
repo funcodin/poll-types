@@ -25,7 +25,7 @@ public class Options extends AbstractPersistable implements Serializable {
 	private String questionId;
 	private String optionValue;
 	private String optionType;
-	private int optionCount;
+	private int voteCount;
 
 	/**
 	 * @return the questionId
@@ -70,17 +70,17 @@ public class Options extends AbstractPersistable implements Serializable {
 	}
 
 	/**
-	 * @return the optionCount
+	 * @return the voteCount
 	 */
-	public int getOptionCount() {
-		return this.optionCount;
+	public int getVoteCount() {
+		return this.voteCount;
 	}
 
 	/**
-	 * @param optionCount the optionCount to set
+	 * @param voteCount the voteCount to set
 	 */
-	public void setOptionCount(final int optionCount) {
-		this.optionCount = optionCount;
+	public void setVoteCount(final int voteCount) {
+		this.voteCount = voteCount;
 	}
 
 }

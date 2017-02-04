@@ -30,7 +30,7 @@ public class OptionsMarshalTest extends BaseMarshalTest<Options> {
 		options.setOptionValue("Yes");
 		options.setOptionType(OptionType.MULTIPLE.name());
 		options.setQuestionId(UUID.randomUUID().toString());
-		options.setOptionCount(1);
+		options.setVoteCount(1);
 		return options;
 	}
 
@@ -42,7 +42,7 @@ public class OptionsMarshalTest extends BaseMarshalTest<Options> {
 	@Override
 	protected void validateObject(Options expected, Options testObject) throws AssertionError {
 		Assert.assertEquals(expected.getId(), testObject.getId());
-		Assert.assertEquals(expected.getOptionCount(), testObject.getOptionCount());
+		Assert.assertEquals(expected.getVoteCount(), testObject.getVoteCount());
 		Assert.assertEquals(expected.getOptionType(), testObject.getOptionType());
 	}
 

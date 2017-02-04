@@ -39,7 +39,7 @@ public class QuestionMarshalTest extends BaseMarshalTest<Question> {
 		options.setOptionValue("Yes");
 		options.setOptionType(OptionType.MULTIPLE.name());
 		options.setQuestionId(question.getId());
-		options.setOptionCount(1);
+		options.setVoteCount(1);
 
 		final Options options1 = new Options();
 		options1.setCreatedDate(new Date());
@@ -48,7 +48,7 @@ public class QuestionMarshalTest extends BaseMarshalTest<Question> {
 		options1.setOptionValue("Yes");
 		options1.setOptionType(OptionType.MULTIPLE.name());
 		options1.setQuestionId(question.getId());
-		options1.setOptionCount(1);
+		options1.setVoteCount(1);
 		optionsList.add(options1);
 
 		optionsList.add(options);
