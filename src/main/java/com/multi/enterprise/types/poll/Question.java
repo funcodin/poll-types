@@ -19,7 +19,7 @@ import com.multi.enterprise.types.AbstractPersistable;
  */
 
 @XmlType
-@XmlRootElement(name = "quesiton")
+@XmlRootElement(name = "question")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Question extends AbstractPersistable implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -29,7 +29,8 @@ public class Question extends AbstractPersistable implements Serializable {
 	private String mediaUrl;
 	private String userId;
 	private int totalVotes;
-	private List<Options> opitons;
+	// TODO fix this typo
+	private List<Options> options;
 
 	/**
 	 * @return the question
@@ -116,17 +117,17 @@ public class Question extends AbstractPersistable implements Serializable {
 	}
 
 	/**
-	 * @return the opitons
+	 * @return the options
 	 */
-	public List<Options> getOpitons() {
-		return this.opitons;
+	public List<Options> getOptions() {
+		return this.options;
 	}
 
 	/**
-	 * @param opitons the opitons to set
+	 * @param options the options to set
 	 */
-	public void setOpitons(final List<Options> opitons) {
-		this.opitons = opitons;
+	public void setOptions(final List<Options> options) {
+		this.options = options;
 	}
 
 }

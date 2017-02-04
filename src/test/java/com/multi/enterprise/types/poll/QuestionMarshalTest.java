@@ -52,7 +52,7 @@ public class QuestionMarshalTest extends BaseMarshalTest<Question> {
 		optionsList.add(options1);
 
 		optionsList.add(options);
-		question.setOpitons(optionsList);
+		question.setOptions(optionsList);
 		return question;
 	}
 
