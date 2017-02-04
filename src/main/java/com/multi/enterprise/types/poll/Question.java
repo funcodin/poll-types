@@ -23,39 +23,25 @@ import com.multi.enterprise.types.AbstractPersistable;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Question extends AbstractPersistable implements Serializable {
 	private static final long serialVersionUID = 1L;
-	private String questionId;
 	private String question;
 	private String optionType;
 	private String qrCodeUrl;
 	private String mediaUrl;
 	private String userId;
+	private int totalVotes;
 	private List<Options> opitons;
-
-	/**
-	 * @return the questionId
-	 */
-	public String getQuestionId() {
-		return questionId;
-	}
-
-	/**
-	 * @param questionId the questionId to set
-	 */
-	public void setQuestionId(String questionId) {
-		this.questionId = questionId;
-	}
 
 	/**
 	 * @return the question
 	 */
 	public String getQuestion() {
-		return question;
+		return this.question;
 	}
 
 	/**
 	 * @param question the question to set
 	 */
-	public void setQuestion(String question) {
+	public void setQuestion(final String question) {
 		this.question = question;
 	}
 
@@ -63,13 +49,13 @@ public class Question extends AbstractPersistable implements Serializable {
 	 * @return the optionType
 	 */
 	public String getOptionType() {
-		return optionType;
+		return this.optionType;
 	}
 
 	/**
 	 * @param optionType the optionType to set
 	 */
-	public void setOptionType(String optionType) {
+	public void setOptionType(final String optionType) {
 		this.optionType = optionType;
 	}
 
@@ -77,7 +63,7 @@ public class Question extends AbstractPersistable implements Serializable {
 	 * @return the qrCodeUrl
 	 */
 	public String getQrCodeUrl() {
-		return qrCodeUrl;
+		return this.qrCodeUrl;
 	}
 
 	/**
@@ -91,13 +77,13 @@ public class Question extends AbstractPersistable implements Serializable {
 	 * @return the mediaUrl
 	 */
 	public String getMediaUrl() {
-		return mediaUrl;
+		return this.mediaUrl;
 	}
 
 	/**
 	 * @param mediaUrl the mediaUrl to set
 	 */
-	public void setMediaUrl(String mediaUrl) {
+	public void setMediaUrl(final String mediaUrl) {
 		this.mediaUrl = mediaUrl;
 	}
 
@@ -105,27 +91,41 @@ public class Question extends AbstractPersistable implements Serializable {
 	 * @return the userId
 	 */
 	public String getUserId() {
-		return userId;
+		return this.userId;
 	}
 
 	/**
 	 * @param userId the userId to set
 	 */
-	public void setUserId(String userId) {
+	public void setUserId(final String userId) {
 		this.userId = userId;
+	}
+
+	/**
+	 * @return the totalVotes
+	 */
+	public int getTotalVotes() {
+		return this.totalVotes;
+	}
+
+	/**
+	 * @param totalVotes the totalVotes to set
+	 */
+	public void setTotalVotes(final int totalVotes) {
+		this.totalVotes = totalVotes;
 	}
 
 	/**
 	 * @return the opitons
 	 */
 	public List<Options> getOpitons() {
-		return opitons;
+		return this.opitons;
 	}
 
 	/**
 	 * @param opitons the opitons to set
 	 */
-	public void setOpitons(List<Options> opitons) {
+	public void setOpitons(final List<Options> opitons) {
 		this.opitons = opitons;
 	}
 

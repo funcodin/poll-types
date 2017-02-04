@@ -22,37 +22,22 @@ import com.multi.enterprise.types.AbstractPersistable;
 public class Options extends AbstractPersistable implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	private String optionId;
 	private String questionId;
 	private String optionValue;
 	private String optionType;
 	private int optionCount;
 
 	/**
-	 * @return the optionId
-	 */
-	public String getOptionId() {
-		return optionId;
-	}
-
-	/**
-	 * @param optionId the optionId to set
-	 */
-	public void setOptionId(String optionId) {
-		this.optionId = optionId;
-	}
-
-	/**
 	 * @return the questionId
 	 */
 	public String getQuestionId() {
-		return questionId;
+		return this.questionId;
 	}
 
 	/**
 	 * @param questionId the questionId to set
 	 */
-	public void setQuestionId(String questionId) {
+	public void setQuestionId(final String questionId) {
 		this.questionId = questionId;
 	}
 
@@ -60,13 +45,13 @@ public class Options extends AbstractPersistable implements Serializable {
 	 * @return the optionValue
 	 */
 	public String getOptionValue() {
-		return optionValue;
+		return this.optionValue;
 	}
 
 	/**
 	 * @param optionValue the optionValue to set
 	 */
-	public void setOptionValue(String optionValue) {
+	public void setOptionValue(final String optionValue) {
 		this.optionValue = optionValue;
 	}
 
@@ -74,13 +59,13 @@ public class Options extends AbstractPersistable implements Serializable {
 	 * @return the optionType
 	 */
 	public String getOptionType() {
-		return optionType;
+		return this.optionType;
 	}
 
 	/**
 	 * @param optionType the optionType to set
 	 */
-	public void setOptionType(String optionType) {
+	public void setOptionType(final String optionType) {
 		this.optionType = optionType;
 	}
 
@@ -88,13 +73,13 @@ public class Options extends AbstractPersistable implements Serializable {
 	 * @return the optionCount
 	 */
 	public int getOptionCount() {
-		return optionCount;
+		return this.optionCount;
 	}
 
 	/**
 	 * @param optionCount the optionCount to set
 	 */
-	public void setOptionCount(int optionCount) {
+	public void setOptionCount(final int optionCount) {
 		this.optionCount = optionCount;
 	}
 
