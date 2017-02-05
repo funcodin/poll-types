@@ -29,8 +29,8 @@
         </snapshots>
     </repository>
     <repository>
-        <id>me-types-mvn-repo</id>
-        <url>https://raw.github.com/funcodin/poll-types-types/mvn-repo/</url>
+        <id>poll-types-dto-mvn-repo</id>
+        <url>https://raw.github.com/funcodin/poll-types-dto/mvn-repo/</url>
         <snapshots>
             <enabled>true</enabled>
             <updatePolicy>always</updatePolicy>
