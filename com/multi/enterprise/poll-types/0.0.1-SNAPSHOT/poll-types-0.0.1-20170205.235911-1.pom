@@ -28,12 +28,25 @@
             <updatePolicy>always</updatePolicy>
         </snapshots>
     </repository>
+    <repository>
+        <id>poll-types-dto-mvn-repo</id>
+        <url>https://raw.github.com/funcodin/poll-types-dto/mvn-repo/</url>
+        <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+        </snapshots>
+    </repository>
 </repositories>
 	
    <dependencies>
    	<dependency>
    		<groupId>com.multi.enterprise</groupId>
    		<artifactId>me-types</artifactId>
+   		<version>0.0.1-SNAPSHOT</version>
+   	</dependency>
+   	<dependency>
+   		<groupId>com.multi.enterprise</groupId>
+   		<artifactId>poll-types-dto</artifactId>
    		<version>0.0.1-SNAPSHOT</version>
    	</dependency>
      <dependency>
