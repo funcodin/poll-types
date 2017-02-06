@@ -23,6 +23,7 @@ import com.multi.enterprise.types.AbstractPersistable;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Question extends AbstractPersistable implements Serializable {
 	private static final long serialVersionUID = 1L;
+	private int questionIndex;
 	private String question;
 	private String optionType;
 	private String qrCodeUrl;
@@ -31,6 +32,20 @@ public class Question extends AbstractPersistable implements Serializable {
 	private int totalVotes;
 	// TODO fix this typo
 	private List<Options> options;
+
+	/**
+	 * @return the questionIndex
+	 */
+	public int getQuestionIndex() {
+		return questionIndex;
+	}
+
+	/**
+	 * @param questionIndex the questionIndex to set
+	 */
+	public void setQuestionIndex(int questionIndex) {
+		this.questionIndex = questionIndex;
+	}
 
 	/**
 	 * @return the question
