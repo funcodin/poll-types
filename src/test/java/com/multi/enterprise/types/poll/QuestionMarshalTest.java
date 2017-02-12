@@ -29,6 +29,7 @@ public class QuestionMarshalTest extends BaseMarshalTest<Question> {
 		question.setId(UUID.randomUUID().toString());
 		question.setCreatedDate(new Date());
 		question.setQuestion("Hello World");
+		question.setOptionType(OptionType.BINARY.name());
 		question.setTotalVotes(10);
 		List<Options> optionsList = new ArrayList<>();
 
