@@ -3,6 +3,8 @@
  */
 package com.multi.enterprise.types.poll.accounts;
 
+import java.util.Set;
+
 import com.multi.enterprise.types.AbstractPersistable;
 
 /**
@@ -15,6 +17,7 @@ public class User extends AbstractPersistable {
 	public String email;
 	public String password;
 	public UserDetails userDetails;
+	public Set<String> associatedGroups;
 
 	/**
 	 * @return the userId
@@ -70,6 +73,20 @@ public class User extends AbstractPersistable {
 	 */
 	public void setUserDetails(UserDetails userDetails) {
 		this.userDetails = userDetails;
+	}
+
+	/**
+	 * @return the associatedGroups
+	 */
+	public Set<String> getAssociatedGroups() {
+		return associatedGroups;
+	}
+
+	/**
+	 * @param associatedGroups the associatedGroups to set
+	 */
+	public void setAssociatedGroups(Set<String> associatedGroups) {
+		this.associatedGroups = associatedGroups;
 	}
 
 }
