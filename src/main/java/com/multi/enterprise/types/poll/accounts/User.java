@@ -3,8 +3,6 @@
  */
 package com.multi.enterprise.types.poll.accounts;
 
-import java.util.Set;
-
 import com.multi.enterprise.types.AbstractPersistable;
 
 /**
@@ -13,38 +11,37 @@ import com.multi.enterprise.types.AbstractPersistable;
  */
 public class User extends AbstractPersistable {
 
-	public String userId;
-	public String email;
-	public String password;
-	public UserDetails userDetails;
-	public Set<String> associatedGroups;
+	private String userName;
+	private String password;
+	private UserDetails userDetails;
+	private UserPersonalDetails personalDetails;
 
 	/**
 	 * @return the userId
 	 */
 	public String getUserId() {
-		return userId;
+		return this.id;
 	}
 
 	/**
 	 * @param userId the userId to set
 	 */
 	public void setUserId(String userId) {
-		this.userId = userId;
+		this.id = userId;
 	}
 
 	/**
-	 * @return the email
+	 * @return the userName
 	 */
-	public String getEmail() {
-		return email;
+	public String getUserName() {
+		return userName;
 	}
 
 	/**
-	 * @param email the email to set
+	 * @param userName the userName to set
 	 */
-	public void setEmail(String email) {
-		this.email = email;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	/**
@@ -76,17 +73,17 @@ public class User extends AbstractPersistable {
 	}
 
 	/**
-	 * @return the associatedGroups
+	 * @return the personalDetails
 	 */
-	public Set<String> getAssociatedGroups() {
-		return associatedGroups;
+	public UserPersonalDetails getPersonalDetails() {
+		return personalDetails;
 	}
 
 	/**
-	 * @param associatedGroups the associatedGroups to set
+	 * @param personalDetails the personalDetails to set
 	 */
-	public void setAssociatedGroups(Set<String> associatedGroups) {
-		this.associatedGroups = associatedGroups;
+	public void setPersonalDetails(UserPersonalDetails personalDetails) {
+		this.personalDetails = personalDetails;
 	}
 
 }

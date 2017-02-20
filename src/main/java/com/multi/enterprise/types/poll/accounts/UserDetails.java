@@ -15,7 +15,7 @@ public class UserDetails extends AbstractPersistable {
 	private AgeGroup ageGroup;
 	private Gender gender;
 
-	// TODO add location details ??
+	// TODO add location details state/country??
 
 	/**
 	 * @return the userId

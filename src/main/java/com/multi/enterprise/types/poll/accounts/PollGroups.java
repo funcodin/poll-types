@@ -13,7 +13,6 @@ import com.multi.enterprise.types.AbstractPersistable;
  */
 public class PollGroups extends AbstractPersistable {
 
-	private String groupId;
 	private String groupName;
 	private String groupAdminId;
 	private boolean isPrivate;
@@ -23,14 +22,14 @@ public class PollGroups extends AbstractPersistable {
 	 * @return the groupId
 	 */
 	public String getGroupId() {
-		return groupId;
+		return this.id;
 	}
 
 	/**
 	 * @param groupId the groupId to set
 	 */
 	public void setGroupId(String groupId) {
-		this.groupId = groupId;
+		this.id = groupId;
 	}
 
 	/**
