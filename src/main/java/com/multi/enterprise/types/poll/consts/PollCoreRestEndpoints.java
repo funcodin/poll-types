@@ -11,4 +11,5 @@ public interface PollCoreRestEndpoints {
 
 	public static final String QUESTION = "/question";
 	public static final String POLL = "/poll";
+	public static final String USER = "/user";
 }

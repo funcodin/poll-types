@@ -12,6 +12,9 @@ import com.multi.enterprise.types.poll.OptionDTO;
 import com.multi.enterprise.types.poll.OptionType;
 import com.multi.enterprise.types.poll.QuestionDTO;
 import com.multi.enterprise.types.poll.QuestionListDTO;
+import com.multi.enterprise.types.poll.accounts.AgeGroup;
+import com.multi.enterprise.types.poll.accounts.Gender;
+import com.multi.enterprise.types.users.UserDTO;
 
 /**
  * @author Robot
@@ -49,6 +52,18 @@ public class DtoUtils {
 		optionDto.setOptionValue(OptionType.BINARY.name());
 		optionDto.setVoteCount(new Random().nextInt(50));
 		return optionDto;
+	}
+
+	public static UserDTO createUserDTO() {
+		final UserDTO userDto = new UserDTO();
+		userDto.setUsername("rvd");
+		userDto.setPassword("asdfasdf");
+		userDto.setAgeGroup(AgeGroup.THIRTIES.name());
+		userDto.setGender(Gender.MALE.name());
+		userDto.setEmail("abd@gmail.com");
+		userDto.setContactNumber("4646546546");
+		userDto.setFullName("adsf adfasdf adsfadf");
+		return userDto;
 	}
 
 }
