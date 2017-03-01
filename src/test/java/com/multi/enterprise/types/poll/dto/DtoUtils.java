@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.UUID;
 
+import com.multi.enterprise.types.friends.FriendRequestDTO;
 import com.multi.enterprise.types.poll.OptionDTO;
 import com.multi.enterprise.types.poll.OptionType;
 import com.multi.enterprise.types.poll.QuestionDTO;
@@ -64,6 +65,13 @@ public class DtoUtils {
 		userDto.setContactNumber("4646546546");
 		userDto.setFullName("adsf adfasdf adsfadf");
 		return userDto;
+	}
+
+	public static FriendRequestDTO friendRequestDTO() {
+		final FriendRequestDTO dto = new FriendRequestDTO();
+		dto.setAccepterUserId(UUID.randomUUID().toString());
+		dto.setRequesterUserId(UUID.randomUUID().toString());
+		return dto;
 	}
 
 }
