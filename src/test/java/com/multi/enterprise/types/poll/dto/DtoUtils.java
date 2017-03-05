@@ -9,6 +9,8 @@ import java.util.Random;
 import java.util.UUID;
 
 import com.multi.enterprise.types.friends.FriendRequestDTO;
+import com.multi.enterprise.types.poll.CommentDTO;
+import com.multi.enterprise.types.poll.CommentListDTO;
 import com.multi.enterprise.types.poll.OptionDTO;
 import com.multi.enterprise.types.poll.OptionType;
 import com.multi.enterprise.types.poll.QuestionDTO;
@@ -71,6 +73,27 @@ public class DtoUtils {
 		final FriendRequestDTO dto = new FriendRequestDTO();
 		dto.setAccepterUserId(UUID.randomUUID().toString());
 		dto.setRequesterUserId(UUID.randomUUID().toString());
+		return dto;
+	}
+
+	public static CommentListDTO commentListDto() {
+		final CommentListDTO listDto = new CommentListDTO();
+		listDto.setLimit(5);
+		listDto.setLastPage(true);
+		listDto.setLastCommentIndex(12);
+
+		final List<CommentDTO> comments = new ArrayList<>();
+		comments.add(commentDTO("This is a random comment "));
+		comments.add(commentDTO("This is a random comment 1"));
+		listDto.setComments(comments);
+		return listDto;
+	}
+
+	public static CommentDTO commentDTO(final String comment) {
+		final CommentDTO dto = new CommentDTO();
+		dto.setComment(comment);
+		dto.setQuestionId(UUID.randomUUID().toString());
+		dto.setUserId(UUID.randomUUID().toString());
 		return dto;
 	}
 
