@@ -15,6 +15,7 @@ import com.multi.enterprise.types.poll.OptionDTO;
 import com.multi.enterprise.types.poll.OptionType;
 import com.multi.enterprise.types.poll.QuestionDTO;
 import com.multi.enterprise.types.poll.QuestionListDTO;
+import com.multi.enterprise.types.poll.UserPollDTO;
 import com.multi.enterprise.types.poll.accounts.AgeGroup;
 import com.multi.enterprise.types.poll.accounts.Gender;
 import com.multi.enterprise.types.users.UserDTO;
@@ -95,6 +96,14 @@ public class DtoUtils {
 		dto.setQuestionId(UUID.randomUUID().toString());
 		dto.setUserId(UUID.randomUUID().toString());
 		return dto;
+	}
+
+	public static UserPollDTO createUserPollDTO() {
+		final UserPollDTO userPollDTO = new UserPollDTO();
+		userPollDTO.setOptionId(UUID.randomUUID().toString());
+		userPollDTO.setQuestionId(UUID.randomUUID().toString());
+		userPollDTO.setUserId(UUID.randomUUID().toString());
+		return userPollDTO;
 	}
 
 }
