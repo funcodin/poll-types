@@ -19,6 +19,7 @@ import com.multi.enterprise.types.poll.UserPollDTO;
 import com.multi.enterprise.types.poll.accounts.AgeGroup;
 import com.multi.enterprise.types.poll.accounts.Gender;
 import com.multi.enterprise.types.users.UserDTO;
+import com.multi.enterprise.types.users.UserResetDTO;
 
 /**
  * @author Robot
@@ -104,6 +105,13 @@ public class DtoUtils {
 		userPollDTO.setQuestionId(UUID.randomUUID().toString());
 		userPollDTO.setUserId(UUID.randomUUID().toString());
 		return userPollDTO;
+	}
+
+	public static UserResetDTO createUserResetDTO() {
+		final UserResetDTO userResetDto = new UserResetDTO();
+		userResetDto.setEmail("pollforfun@gmail.com");
+		userResetDto.setUserName("rvd9900");
+		return userResetDto;
 	}
 
 }
