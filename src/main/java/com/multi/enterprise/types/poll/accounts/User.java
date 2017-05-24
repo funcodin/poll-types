@@ -15,6 +15,21 @@ public class User extends AbstractPersistable {
 	private String password;
 	private UserDetails userDetails;
 	private UserPersonalDetails personalDetails;
+	private UserStatistics userStatistics;
+
+	/**
+	 * @return the userStatistics
+	 */
+	public UserStatistics getUserStatistics() {
+		return userStatistics;
+	}
+
+	/**
+	 * @param userStatistics the userStatistics to set
+	 */
+	public void setUserStatistics(UserStatistics userStatistics) {
+		this.userStatistics = userStatistics;
+	}
 
 	/**
 	 * @return the userId
