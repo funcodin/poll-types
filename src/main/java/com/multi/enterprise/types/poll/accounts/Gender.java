@@ -9,5 +9,5 @@ package com.multi.enterprise.types.poll.accounts;
  */
 public enum Gender {
 
-	MALE, FEMALE
+	MALE, FEMALE, NA
 }
