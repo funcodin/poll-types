@@ -16,4 +16,5 @@ public interface PollCoreRestEndpoints {
 	public static final String FRIENDS = "/friends";
 	public static final String COMMENT = "/comments";
 	public static final String USER_POLLS = "/userpoll";
+	public static final String CONTACT_US = "/contactus";
 }
